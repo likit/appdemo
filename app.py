@@ -11,6 +11,10 @@ def index():
 def greet(name):
 	return '<h1>Welcome ' + name.title() + '</h1>'
 
+@app.route('/services')
+def show_services():
+	return '<ul><li>Glucose</li><li>Cholesterol</li></ul>'
+
 
 @app.route('/api/customer/<name>')
 def api_greet(name):
