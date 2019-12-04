@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
@@ -10,6 +10,11 @@ def index():
 @app.route('/customer/<name>')
 def greet(name):
 	return '<h1>Welcome ' + name.title() + '</h1>'
+
+
+@app.route('/api/customer/<name>')
+def api_greet(name):
+	return jsonify({'message': 'Welcome {}'.format(name.title())})
 
 
 if __name__ == '__main__':
