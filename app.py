@@ -14,7 +14,7 @@ def greet(name):
 
 @app.route('/api/customer/<name>')
 def api_greet(name):
-	return jsonify({'message': 'Welcome {}'.format(name.title())})
+	return jsonify({'data': 'Welcome {}'.format(name.title())})
 
 
 if __name__ == '__main__':
